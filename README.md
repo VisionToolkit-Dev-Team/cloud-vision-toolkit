@@ -12,7 +12,7 @@ The Vision Toolkit, developed by the AU / UK Vision team, is a graph flow-based 
 
 ## Documentation
 
-The documentation for this project can be found [here]().
+The documentation for this project can be found [here](https://visiontoolkit-dev-team.github.io/cloud-vision-toolkit/#/).
 
 ## Versions
 
