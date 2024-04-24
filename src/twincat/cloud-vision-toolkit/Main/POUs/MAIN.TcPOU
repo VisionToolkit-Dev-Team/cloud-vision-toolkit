@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{5fb12259-b215-4e01-9f13-2f935b9560b9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR		
+	graphFramework : GraphFramework;
+	
+	basicDatatypePack : BasicDatatypePack;
+	basicNodePack : BasicNodePack;
+	
+	server : RpcServer;
+	graphApi : graphApi(graphFramework);	
+	
+	initialise: BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT initialise THEN
+	
+	// setup graph
+	graphFramework.InstallDatatypePack(basicDatatypePack);
+	graphFramework.InstallNodePack(basicNodePack);
+
+	// setup the api
+	graphApi.RegisterWith(server);
+
+	// done
+	initialise := TRUE;
+
+END_IF
+
+graphApi.Graphs.Execute();
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
