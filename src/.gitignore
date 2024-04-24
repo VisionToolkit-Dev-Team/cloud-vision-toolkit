@@ -19,7 +19,7 @@ Confidential/
 *.compiled-library
 *.bootinfo
 *.bootinfo_guids
-*.library
+# *.library
 *.project.~u
 *.tsproj.bak
 *.xti.bak
@@ -27,7 +27,7 @@ LineIDs.dbg
 LineIDs.dbg.bak
 _Boot/
 _CompileInfo/
-_Libraries/
+# _Libraries/
 _ModuleInstall/
 
 ## Ignore TwinCAT HMI temporary files, build results, and
