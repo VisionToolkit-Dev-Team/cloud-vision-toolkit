@@ -6,19 +6,32 @@ VAR
 	graphFramework : GraphFramework;
 	
 	basicDatatypePack : BasicDatatypePack;
+//	visionDatatypePack : VisionDatatypePack;
+	
 	basicNodePack : BasicNodePack;
+//	visionNodePack : VisionNodePack;
+	
+	playgroundNode : PlaygroundNode;
 	
 	server : RpcServer;
 	graphApi : graphApi(graphFramework);	
 	
 	initialise: BOOL;
+	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT initialise THEN
 	
-	// setup graph
+	// setup graph datatypes
 	graphFramework.InstallDatatypePack(basicDatatypePack);
+//	graphFramework.InstallDatatypePack(visionDatatypePack);
+	
+	// setup graph nodepacks
 	graphFramework.InstallNodePack(basicNodePack);
+//	graphFramework.InstallNodePack(visionNodePack);
+	
+	// add playground node
+	graphFramework.NodeFactory.AddNodeAsPrototype('Playground.Node',playgroundNode);
 
 	// setup the api
 	graphApi.RegisterWith(server);
