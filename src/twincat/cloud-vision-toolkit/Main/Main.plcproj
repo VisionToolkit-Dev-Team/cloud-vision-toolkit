@@ -42,6 +42,7 @@
     </PlaceholderReference>
     <PlaceholderReference Include="mobject-datatypes">
       <DefaultResolution>mobject-datatypes, * (mobject)</DefaultResolution>
+      <Namespace>mobject_datatypes</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="mobject-graph">
       <DefaultResolution>mobject-graph, * (mobject)</DefaultResolution>

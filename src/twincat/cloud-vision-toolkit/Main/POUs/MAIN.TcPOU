@@ -5,9 +5,10 @@
 VAR		
 	graphFramework : GraphFramework;
 	
+	primitiveDatatypePack : PrimitiveDatatypePack;
 	basicDatatypePack : BasicDatatypePack;
 //	visionDatatypePack : VisionDatatypePack;
-	
+
 	basicNodePack : BasicNodePack;
 //	visionNodePack : VisionNodePack;
 	
@@ -23,21 +24,22 @@ END_VAR]]></Declaration>
       <ST><![CDATA[IF NOT initialise THEN
 	
 	// setup graph datatypes
+	graphFramework.InstallDatatypePack(primitiveDatatypePack);
 	graphFramework.InstallDatatypePack(basicDatatypePack);
 //	graphFramework.InstallDatatypePack(visionDatatypePack);
 	
 	// setup graph nodepacks
-	graphFramework.InstallNodePack(basicNodePack);
+//	graphFramework.InstallNodePack(basicNodePack);
 //	graphFramework.InstallNodePack(visionNodePack);
 	
 	// add playground node
-	graphFramework.NodeFactory.AddNodeAsPrototype('Playground.Node',playgroundNode);
+//	graphFramework.NodeFactory.AddNodeAsPrototype('Playground.Node',playgroundNode);
 
 	// setup the api
 	graphApi.RegisterWith(server);
 
 	// done
-	initialise := TRUE;
+	initialise := TRUE;	
 
 END_IF
 
