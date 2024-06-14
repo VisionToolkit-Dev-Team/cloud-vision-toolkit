@@ -12,8 +12,6 @@ VAR
 	basicNodePack : BasicNodePack;
 //	visionNodePack : VisionNodePack;
 	
-	playgroundNode : PlaygroundNode;
-	
 	server : RpcServer;
 	graphApi : graphApi(graphFramework);	
 	
@@ -43,8 +41,7 @@ END_VAR]]></Declaration>
 
 END_IF
 
-graphApi.Graphs.Execute();
-]]></ST>
+graphApi.Graphs.Execute();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
