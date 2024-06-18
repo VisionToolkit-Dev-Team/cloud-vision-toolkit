@@ -41,6 +41,7 @@ END_VAR]]></Declaration>
 
 END_IF
 
+server.CyclicCall();
 graphApi.Graphs.Execute();]]></ST>
     </Implementation>
   </POU>
