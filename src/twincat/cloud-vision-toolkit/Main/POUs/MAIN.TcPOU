@@ -6,11 +6,11 @@ VAR
 	graphFramework : GraphFramework;
 	
 	primitiveDatatypePack : PrimitiveDatatypePack;
-	basicDatatypePack : BasicDatatypePack;
+	plcDatatypePack : PlcDatatypePack;
 	visionDatatypePack : VisionDatatypePack;
 	playground : Playground;
 
-	basicNodePack : BasicNodePack;
+	plcNodePack : PlcNodePack;
 //	visionNodePack : VisionNodePack;
 	
 	server : RpcServer;
@@ -28,7 +28,7 @@ END_VAR]]></Declaration>
 	
 	// setup graph datatypes
 	graphFramework.InstallDatatypePack(primitiveDatatypePack);
-	graphFramework.InstallDatatypePack(basicDatatypePack);
+	graphFramework.InstallDatatypePack(plcDatatypePack);
 	graphFramework.InstallDatatypePack(visionDatatypePack);
 	
 	// setup graph nodepacks
@@ -49,12 +49,12 @@ END_IF
 server.CyclicCall();
 graphApi.Graphs.Execute();
 
-readImage(
-    sFilePath   :=  'C:\temp\image.png', 
-    ipDestImage :=  playground.Image.Value,
-    bRead       :=  TRUE,
-    nTimeout    :=  T#500MS
-);
+//readImage(
+//    sFilePath   :=  'C:\temp\image.png', 
+//    ipDestImage :=  playground.Image.Value,
+//    bRead       :=  TRUE,
+//    nTimeout    :=  T#500MS
+//);
 ]]></ST>
     </Implementation>
   </POU>

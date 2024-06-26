@@ -32,10 +32,6 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderReference Include="mobject-basic-nodepack">
-      <DefaultResolution>mobject-basic-nodepack, * (mobject)</DefaultResolution>
-      <Namespace>mobject_basic_nodepack</Namespace>
-    </PlaceholderReference>
     <PlaceholderReference Include="mobject-core">
       <DefaultResolution>mobject-core, * (mobject)</DefaultResolution>
       <Namespace>mobject_core</Namespace>
@@ -44,12 +40,17 @@
       <DefaultResolution>mobject-graph, * (mobject)</DefaultResolution>
       <Namespace>mobject_graph</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="mobject-graph-plc-pack">
+      <DefaultResolution>mobject-graph-plc-pack, * (mobject)</DefaultResolution>
+      <Namespace>mobject_graph_plc_pack</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="mobject-graph-vision-pack">
+      <DefaultResolution>mobject-graph-vision-pack, * (mobject)</DefaultResolution>
+      <Namespace>mobject_graph_vision_pack</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="mobject-server">
       <DefaultResolution>mobject-server, * (mobject)</DefaultResolution>
       <Namespace>mobject_server</Namespace>
-    </PlaceholderReference>
-    <PlaceholderReference Include="mobject-vision-nodepack">
-      <DefaultResolution>mobject-vision-nodepack, * (mobject)</DefaultResolution>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
