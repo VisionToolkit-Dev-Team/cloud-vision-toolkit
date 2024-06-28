@@ -3,59 +3,43 @@
   <POU Name="MAIN" Id="{5fb12259-b215-4e01-9f13-2f935b9560b9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR		
-	graphFramework : GraphFramework;
-	
-	primitiveDatatypePack : PrimitiveDatatypePack;
-	plcDatatypePack : PlcDatatypePack;
-	visionDatatypePack : VisionDatatypePack;
-	playground : Playground;
-
-	plcNodePack : PlcNodePack;
-//	visionNodePack : VisionNodePack;
-	
-	server : RpcServer;
-	graphApi : graphApi(graphFramework);	
-	
+	// installation of the packs is only requried once. 
 	initialise: BOOL;
 	
-	readImage: FB_VN_ReadImage;
-	myImage : ITcVnImage;
-	hr : HRESULT;	
-	
+	// graph packs
+	iecDatatypesPack : IecDatatypesPack; // mobject-graph, 
+	plcPack : PlcPack; // mobject-graph-plc-pack
+	visionPack : VisionPack; // mobject-graph-vision-pack
+
+	// application
+	graphFramework : GraphFramework;
+	server : RpcServer;
+	graphFrameworkApi : GraphFrameworkApi(graphFramework);	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT initialise THEN
-	
-	// setup graph datatypes
-	graphFramework.InstallDatatypePack(primitiveDatatypePack);
-	graphFramework.InstallDatatypePack(plcDatatypePack);
-	graphFramework.InstallDatatypePack(visionDatatypePack);
-	
-	// setup graph nodepacks
-//	graphFramework.InstallNodePack(basicNodePack);
-//	graphFramework.InstallNodePack(visionNodePack);
-	
-	// add playground node
-	graphFramework.NodeFactory.AddNodeAsPrototype('Playground/Node', playground);
 
-	// setup the api
-	graphApi.RegisterWith(server);
+	// add graph packs here...
+	graphFramework.Install(iecDatatypesPack); // adds primitives such as BOOL, WORD, STRING...
+	graphFramework.Install(plcPack); // adds datatypes and nodes base on TC2_Utilities...
+	graphFramework.Install(visionPack); // adds datatypes and nodes for TC3_Vision...
+	
+	// add any custom datatypes here...
+	// graphFramework.Datatypes.RegisterDatatype(_customDatatype);
+	
+	// add any custom nodes here...
+	// graphFramework.NodeFactory.AddNodeAsPrototype('Custom/Node', customNode);
+	
+	// add the graph framework api to the server, this will register all of the endpoint handlers
+	server.RegisterApi(graphFrameworkApi);
 
 	// done
 	initialise := TRUE;	
 
 END_IF
 
-server.CyclicCall();
-graphApi.Graphs.Execute();
-
-//readImage(
-//    sFilePath   :=  'C:\temp\image.png', 
-//    ipDestImage :=  playground.Image.Value,
-//    bRead       :=  TRUE,
-//    nTimeout    :=  T#500MS
-//);
-]]></ST>
+// a special feature of .RegisterApi is that the server will know to cyclic call all registered apis each cycle. 
+server.CyclicCall();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
