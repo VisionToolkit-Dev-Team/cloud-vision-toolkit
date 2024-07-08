@@ -21,12 +21,16 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Examples\MyCustomNode.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="POUs" />
+    <Folder Include="POUs\Examples" />
   </ItemGroup>
   <ItemGroup>
     <PlaceholderReference Include="mobject-core">

@@ -10,11 +10,16 @@ VAR
 	iecDatatypesPack : IecDatatypesPack; // mobject-graph, 
 	plcPack : PlcPack; // mobject-graph-plc-pack
 	visionPack : VisionPack; // mobject-graph-vision-pack
+	
+	// custom node
+	myCustomNode : MyCustomNode;
 
 	// application
 	graphFramework : GraphFramework;
 	server : RpcServer;
 	graphFrameworkApi : GraphFrameworkApi(graphFramework);	
+	
+	// mobjectGraphApi : MobjecGraphApi(graphFramework);	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT initialise THEN
@@ -28,10 +33,11 @@ END_VAR]]></Declaration>
 	// graphFramework.Datatypes.RegisterDatatype(_customDatatype);
 	
 	// add any custom nodes here...
-	// graphFramework.NodeFactory.AddNodeAsPrototype('Custom/Node', customNode);
+	graphFramework.NodeFactory.AddNodeAsPrototype('Custom/MyCustomNode', myCustomNode);
 	
 	// add the graph framework api to the server, this will register all of the endpoint handlers
 	server.RegisterApi(graphFrameworkApi);
+//	server.RegisterApi(mobjectGraphApi);
 
 	// done
 	initialise := TRUE;	
