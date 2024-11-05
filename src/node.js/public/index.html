@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GraphFramework</title>
+    <link rel="stylesheet" type="text/css" href="./mobject-litegraph.css" />
+    <link rel="stylesheet" type="text/css" href="./mobject-graph-ui.css" />
+  </head>
+  <body>
+    <div id="main"></div>
+    <div class="litegraph" style="height: 100%; width: 100%">
+      <div id="my-editor" style="width: 1920px; height: 1000px"></div>
+    </div>
+    <button id="getBlueprintsBtn">Get Blueprints</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="./mobject-litegraph.bundle.js"></script>
+    <script type="module" src="./mobject-graph-ui.bundle.js"></script>
+    <script
+      type="module"
+      src="./mobject-graph-ui-iec-datatypes-pack.bundle.js"
+    ></script>
+    <script
+      type="module"
+      src="./mobject-graph-ui-vision-pack.bundle.js"
+    ></script>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>

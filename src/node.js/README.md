@@ -1,5 +1,21 @@
-# Node.js Webserver
+# Web Server (frontend)
 
-Currently this project is being developed in an alternative repo. Once complete, this project will gain it's own version.
+## Getting started
 
-Please follow the instructions [here](https://github.com/Mobject-Dev-Team/mobject-graph-webserver)
+### TwinCAT
+
+To use this project you will need cloud-vision-toolkit running in TwinCAT on the local system.
+
+### Web Server
+
+1. Install node dependencies
+
+```
+npm install
+```
+
+2. Run the UI
+
+```
+npm start
+```

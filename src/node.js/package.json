@@ -1,0 +1,26 @@
+{
+  "name": "mobject-graph-server",
+  "version": "1.1.0",
+  "description": "use of mobject-graph on a webserver",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon ./src/app.js | node ./scripts/browser-sync-config.js",
+    "sync": "node ./scripts/browser-sync-config.js"
+  },
+  "author": "benhar-dev",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "mobject-client": "^2.0.0",
+    "mobject-graph-ui": "^0.1.2",
+    "mobject-graph-ui-iec-datatypes-pack": "^0.1.0",
+    "mobject-graph-ui-vision-pack": "^0.1.0",
+    "mobject-litegraph": "^0.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "nodemon": "^3.1.0"
+  }
+}
