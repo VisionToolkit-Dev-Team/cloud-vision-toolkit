@@ -6,8 +6,8 @@ import { ApiConnection } from "./fetch-rpc-api-connection.js";
 
 var graphFramework = new GraphFramework();
 graphFramework.install(new DefaultPack());
-graphFramework.install(IecDatatypesPack);
-graphFramework.install(VisionPack);
+graphFramework.install(IecDatatypesPack); // todo : change pack to be new
+graphFramework.install(VisionPack); // todo : change pack to be new
 
 var apiConnection = new ApiConnection();
 
