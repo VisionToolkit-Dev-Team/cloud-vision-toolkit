@@ -5,20 +5,13 @@ const { IecDatatypesPack } = MobjectGraphUiIecDatatypesPack;
 import { ApiConnection } from "./fetch-rpc-api-connection.js";
 
 var graphFramework = new GraphFramework();
-graphFramework.install(DefaultPack);
+graphFramework.install(new DefaultPack());
 graphFramework.install(IecDatatypesPack);
 graphFramework.install(VisionPack);
 
 var apiConnection = new ApiConnection();
 
-new GraphEditor(
-  {
-    containerSelector: "#my-editor",
-    width: 1920,
-    height: 1000,
-  },
-  apiConnection
-);
+new GraphEditor("my-editor", apiConnection);
 
 document
   .getElementById("getBlueprintsBtn")
