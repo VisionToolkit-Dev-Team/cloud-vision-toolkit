@@ -6,8 +6,8 @@ import { ApiConnection } from "./fetch-rpc-api-connection.js";
 
 const graphFramework = new GraphFramework();
 graphFramework.install(new DefaultPack());
-graphFramework.install(IecDatatypesPack); // todo : change pack to be new
-graphFramework.install(VisionPack); // todo : change pack to be new
+graphFramework.install(new IecDatatypesPack());
+graphFramework.install(new VisionPack());
 
 const apiConnection = new ApiConnection();
 const graphEditor = new GraphEditor("my-editor", apiConnection);

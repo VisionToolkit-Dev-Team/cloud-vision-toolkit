@@ -15,8 +15,8 @@
     "express": "^4.19.1",
     "mobject-client": "^2.0.0",
     "mobject-graph-ui": "^0.1.5",
-    "mobject-graph-ui-iec-datatypes-pack": "^0.1.0",
-    "mobject-graph-ui-vision-pack": "^0.1.0",
+    "mobject-graph-ui-iec-datatypes-pack": "^0.1.1",
+    "mobject-graph-ui-vision-pack": "^0.1.2",
     "mobject-litegraph": "^0.1.8"
   },
   "devDependencies": {
