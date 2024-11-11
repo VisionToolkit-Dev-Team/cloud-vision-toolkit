@@ -1,6 +1,7 @@
 export class ApiConnection {
   async send(methodName, params) {
     try {
+      console.log("fetch", methodName);
       const response = await fetch(`/rpc/${methodName}`, {
         method: "POST",
         headers: {
