@@ -28,6 +28,9 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\_TcVnArray7_LREAL.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="POUs" />
@@ -84,6 +87,22 @@
     <PlaceholderResolution Include="mobject-server">
       <Resolution>mobject-server, * (mobject)</Resolution>
     </PlaceholderResolution>
+  </ItemGroup>
+  <ItemGroup>
+    <SubObject Include="_TcVnArray7_LREAL.Address" />
+    <SubObject Include="_TcVnArray7_LREAL.Address.Get" />
+    <SubObject Include="_TcVnArray7_LREAL.ClearReference" />
+    <SubObject Include="_TcVnArray7_LREAL.Clone" />
+    <SubObject Include="_TcVnArray7_LREAL.FB_init" />
+    <SubObject Include="_TcVnArray7_LREAL.Identifier" />
+    <SubObject Include="_TcVnArray7_LREAL.Identifier.Get" />
+    <SubObject Include="_TcVnArray7_LREAL.MakeReferenceTo" />
+    <SubObject Include="_TcVnArray7_LREAL.SetBaseDatatypeReference" />
+    <SubObject Include="_TcVnArray7_LREAL.Size" />
+    <SubObject Include="_TcVnArray7_LREAL.Size.Get" />
+    <SubObject Include="_TcVnArray7_LREAL.TryMakeReferenceTo" />
+    <SubObject Include="_TcVnArray7_LREAL.Value" />
+    <SubObject Include="_TcVnArray7_LREAL.Value.Get" />
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
