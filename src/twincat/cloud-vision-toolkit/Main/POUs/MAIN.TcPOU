@@ -3,6 +3,7 @@
   <POU Name="MAIN" Id="{5fb12259-b215-4e01-9f13-2f935b9560b9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR		
+
 	// installation of the packs is only requried once. 
 	initialise: BOOL;
 	
@@ -18,8 +19,7 @@ VAR
 	graphFramework : GraphFramework;
 	server : RpcServer;
 	graphFrameworkApi : GraphFrameworkApi(graphFramework);	
-	
-	// mobjectGraphApi : MobjecGraphApi(graphFramework);	
+
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT initialise THEN
@@ -37,7 +37,6 @@ END_VAR]]></Declaration>
 	
 	// add the graph framework api to the server, this will register all of the endpoint handlers
 	server.RegisterApi(graphFrameworkApi);
-//	server.RegisterApi(mobjectGraphApi);
 
 	// done
 	initialise := TRUE;	
