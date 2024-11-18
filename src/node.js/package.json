@@ -14,7 +14,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.1",
     "mobject-client": "^2.0.0",
-    "mobject-graph-ui": "^0.1.19",
+    "mobject-graph-ui": "^0.1.20",
     "mobject-graph-ui-iec-datatypes-pack": "^0.1.2",
     "mobject-graph-ui-vision-pack": "^0.1.4",
     "mobject-litegraph": "^0.1.8"
