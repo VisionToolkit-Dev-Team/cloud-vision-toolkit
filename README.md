@@ -27,7 +27,7 @@ git clone https://github.com/VisionToolkit-Dev-Team/cloud-vision-toolkit
    - TwinCAT XAE 4024.62 (minimum)
    - TwinCAT Vision 4.0.5.10 (minimum)
 
-2. Open, activate and run the TwinCAT project found in `\src\twincat\cloud-vision-toolkit`.
+2. Open, activate and run the TwinCAT project `\src\twincat\cloud-vision-toolkit.sln`.
 
 If you are missing any of the mobject-libraries, then simply right click on the project and select "Install Project Library (unknown versions)"
 
