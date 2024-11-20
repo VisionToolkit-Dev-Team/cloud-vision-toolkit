@@ -1,7 +1,6 @@
-const { GraphFramework, GraphEditor, DefaultPack } = MobjectGraphUi;
-const { VisionPack } = MobjectGraphUiVisionPack;
-const { IecDatatypesPack } = MobjectGraphUiIecDatatypesPack;
-
+import { GraphFramework, GraphEditor, DefaultPack } from "mobject-graph-ui";
+import { VisionPack } from "mobject-graph-ui-vision-pack";
+import { IecDatatypesPack } from "mobject-graph-ui-iec-datatypes-pack";
 import { ApiConnection } from "./fetch-rpc-api-connection.js";
 
 const graphFramework = new GraphFramework();
@@ -10,4 +9,4 @@ graphFramework.install(new IecDatatypesPack());
 graphFramework.install(new VisionPack());
 
 const apiConnection = new ApiConnection();
-const graphEditor = new GraphEditor("my-editor", apiConnection);
+window.graph = new GraphEditor("my-editor", apiConnection);
